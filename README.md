@@ -1,6 +1,6 @@
 # Egg Playground
 
-Egg Playground is a simple exploration of
+Egg Playground is an exploration of
 
 + the interactive narrative method of [easter eggs](https://en.wikipedia.org/wiki/Easter_egg_(media)
 + the causality dilemma of [the chicken or the egg](https://en.wikipedia.org/wiki/Chicken_or_the_egg)
