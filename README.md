@@ -2,7 +2,7 @@
 
 Egg Playground is an exploration of
 
-+ the interactive narrative method of [easter eggs](https://en.wikipedia.org/wiki/Easter_egg_(media)
++ the interactive narrative method of [easter eggs](https://en.wikipedia.org/wiki/Easter_egg_(media))
 + the causality dilemma of [the chicken or the egg](https://en.wikipedia.org/wiki/Chicken_or_the_egg)
 
 using simple html, css, and javascript.
@@ -20,10 +20,10 @@ using simple html, css, and javascript.
 	2. If you want my suggestion, crack teal - salmon - gold - teal - salmon - teal - salmon - gold - teal - salmon
 
 ## Credits
-easteregg.svg -> designed by starline / Freepik
-chicken.svg -> designed by TBD
-coop/grease (cooper black 'knock-off') -> https://webfonts.ffonts.net/Grease.font
-🎶 teal-salmon-gold [konami code](https://en.wikipedia.org/wiki/Konami_Code) -> 'Girl U Want' by Devo
++ easteregg.svg -> designed by starline / Freepik
++ chicken.svg -> designed by TBD
++ coop/grease webfont (cooper black 'knock-off') -> https://webfonts.ffonts.net/Grease.font
++ 🎶 teal-salmon-gold [konami code](https://en.wikipedia.org/wiki/Konami_Code) -> 'Girl U Want' by Devo
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
