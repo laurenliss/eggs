@@ -93,13 +93,15 @@ function nopinata() {
 
 Synth instanceof AudioSynth; // true
 var notes = Synth.createInstrument('piano');
-Synth.setSampleRate(20000);
-Synth.setVolume(0.5517); // Fact 4) 5517 is Liss upside down on a calculator
 
 // sound workaround for iOS + Safari
 function unlockAudio(){ // Fact 5) this is annoying but I appreciate Safari requiring user consent before playing sound.
 	Synth.setVolume(0.0); // shhhhhhhh
 	notes.play('C', 2, .1);
+	document.body.removeEventListener('click', unlockAudio);
+	document.body.removeEventListener('touchstart', unlockAudio);
+	Synth.setSampleRate(20000);
+	Synth.setVolume(0.5517); // Fact 4) 5517 is Liss upside down on a calculator
 }
 document.body.addEventListener('click', unlockAudio);
 document.body.addEventListener('touchstart', unlockAudio);
