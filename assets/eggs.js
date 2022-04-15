@@ -1,12 +1,10 @@
 var _eggs = 0;
 var colors = ['salmon', 'pink', 'coral','gold', 'plum', 'orange', 'khaki', 'olive', 'teal'];
-
+// Fact 7) I thought it would be funny to use "word" html colors instead of hex bc I like working within constraint and will manufacture it if it is not there
 
 function camefirst(){
 
-	// some transition on the background?!
-
-	// there is a chicken and an egg on this page.
+	// there is a chicken and an egg on this page. Fact 1) I like questions that don't have clear answers, like this one.
 	var thisone = document.getElementById("egg0");
 	var thatone = document.getElementById("chicken");
 	thisone.setAttribute("class", "hide");
@@ -16,13 +14,12 @@ function camefirst(){
 	which = Math.floor(Math.random() * 2);
 	if(which == 1){
 		// it is the chicken.
-		//setFill(thatone, "black");
 		thatone.setAttribute("class", "show");
 	} else {
 		// it is the egg.
 		thisone.setAttribute("class", "show");
 	}
-
+	// it would be funny if sometimes it shows a dinosaur, not a chicken, as they are the the original egg layers
 }
 
 // if there is a chicken, we can lay an egg
@@ -35,7 +32,7 @@ function lay(){
 	newegg.setAttribute("class", "show");
 	newegg.id = "egg" + _eggs;
 	newegg.setAttribute("class", _currentFill);
-  document.getElementById('basket').prepend(newegg);
+  document.getElementById('basket').prepend(newegg); // Fact 2) I like puns, oh well.
 	// make it the same color as the chicken
 	setFill(newegg,_currentFill);
 	// could these have rando pattern fills like easter eggs?
@@ -52,6 +49,8 @@ function crack(what){
 	document.getElementById("chicken").setAttribute("class", "show");
 	// bye bye little egg
 	what.setAttribute("class", "hide"); // delete
+
+	// future: crack animation or svg swap
 }
 
 
@@ -66,7 +65,7 @@ function setFill(who, color){
 
 // the pinata effect
 let intv;
-function pinata() {
+function pinata() { // Fact 3) I appreciate chaos
   if (!intv) {
     intv = setInterval(swap, 300);
   }
@@ -95,12 +94,21 @@ function nopinata() {
 Synth instanceof AudioSynth; // true
 var notes = Synth.createInstrument('piano');
 Synth.setSampleRate(20000);
-Synth.setVolume(0.5517); // 5517 is Liss upside down on a calculator
+Synth.setVolume(0.5517); // Fact 4) 5517 is Liss upside down on a calculator
+
+// sound workaround for iOS + Safari
+function unlockAudio(){ // Fact 5) this is annoying but I appreciate Safari requiring user consent before playing sound.
+	Synth.setVolume(0.0); // shhhhhhhh
+	notes.play('C', 2, .1);
+}
+document.body.addEventListener('click', unlockAudio);
+document.body.addEventListener('touchstart', unlockAudio);
+
 
 // play the note associated to the color
 function play(who) {
 	//alert(who);
-	// a switch statement! how novel.
+	// Fact 6) I am trying to cram as many types of logic in here as possible, a real cornucopia of vanilla js, for my own enjoyment
 	switch(who) {
 	  case "teal":
 			notes.play('D#', 3, .75);
